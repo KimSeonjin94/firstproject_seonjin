@@ -1,0 +1,18 @@
+{{>layouts/header}}
+<!-- 부트스트랩 CSS코드적용-->
+<!-- action: URL 주소를 적어 해당 페이지로 폼 데이터를 보낸다는 의미-->
+<!-- method: 속성 값으로 get과 post, 2가지를 설정할 수 있다.-->
+<form class="container" action="/articles/create" method="post">
+    <div class="mb-3">
+        <label class="form=label">제목</label>
+
+        <input type="text" class="form-control" name="title">  <!--게시판의 제목을 입력, DTO의 필드명과 동일한 이름을 name의 속성값으로 지정했으며, 이제 입력폼이 DTO필드와 연결-->
+    </div>
+    <div class="mb-3">
+        <label class="form=label">내용</label>
+        <textarea class="form-control" rows="3" name="content"></textarea> <!--게시판의 내용을 입력,DTO의 필드명과 동일한 이름을 content의 속성값으로 지정했으며, 이제 입력폼이 DTO필드와 연결-->
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button> <!--게시판의 전송 버튼-->
+</form>
+
+{{>layouts/footer}}
